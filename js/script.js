@@ -1,0 +1,1 @@
+console.log("Bem-vindo à CoreByte Tech Solutions!");
