@@ -9,65 +9,138 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Header e Menu Padronizado com Hambúrguer -->
-    <header style="background-color: #111; padding: 20px 0; border-bottom: 1px solid #222;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h1 class="logo" style="color: #fff; font-size: 24px; margin: 0;">CoreByte</h1>
-            
-            <!-- Botão do Menu Hambúrguer (Aparece apenas no mobile) -->
-            <button id="menu-toggle" aria-label="Abrir Menu" style="background: none; border: none; cursor: pointer; display: none; flex-direction: column; gap: 5px;">
-                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
-                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
-                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
+    <!-- Header e Menu Padronizado -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                CoreByte Tech Solutions
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-            <nav>
-                <ul class="menu" id="menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-                    <li><a href="index.html" style="color: #bbb; text-decoration: none;">Home</a></li>
-                    <li><a href="about.html" style="color: #bbb; text-decoration: none;">Sobre</a></li>
-                    <li><a href="services.html" class="active" style="color: #fff; text-decoration: none; font-weight: bold;">Serviços</a></li>
-                    <li><a href="projects.html" style="color: #bbb; text-decoration: none;">Portfólio</a></li>
-                    <li><a href="courses.html" style="color: #bbb; text-decoration: none;">Cursos</a></li>
-                    <li><a href="contact.html" style="color: #bbb; text-decoration: none;">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="services.html" class="active">Serviços</a></li>
+                <li><a href="projects.html">Portfólio</a></li>
+                <li><a href="courses.html">Cursos</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+
+            <a href="contact.html" class="btn-menu">
+                Solicitar Orçamento
+            </a>
+        </nav>
     </header>
 
-    <!-- Conteúdo da Página Serviços -->
+    <!-- Conteúdo da Página de Serviços -->
     <main class="container py-5" style="max-width: 1200px; margin: 40px auto; padding: 0 20px; color: #ddd;">
-        <section class="services-section">
-            <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">Nossos Serviços</h2>
-            <p style="line-height: 1.6; margin-bottom: 40px;">Oferecemos soluções tecnológicas sob medida para alavancar a presença digital e a eficiência operacional do seu negócio.</p>
+        <section class="services fade-in" style="padding: 40px 0;">
+            <h2 style="text-align: center; margin-bottom: 10px;">NOSSAS SOLUÇÕES E SERVIÇOS</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div style="background-color: #161b22; padding: 25px; border-radius: 8px; border: 1px solid #30363d;">
-                    <h3 style="color: #58a6ff; font-size: 22px; margin-bottom: 15px;">Desenvolvimento Web</h3>
-                    <p style="line-height: 1.6; color: #8b949e;">Criação de sites institucionais, landing pages e sistemas web responsivos de alta performance com tecnologias modernas.</p>
+            <p class="portfolio-subtitle" style="text-align: center; margin-bottom: 40px;">
+                Tecnologia de ponta e desenvolvimento especializado para escalar o seu negócio.
+            </p>
+
+            <div class="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="card" style="background-color: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">💻 Desenvolvimento Web</h3>
+                    <p style="color: #8b949e; line-height: 1.6; margin-bottom: 20px;">Criação de sites institucionais modernos, landing pages de alta conversão e sistemas web corporativos totalmente personalizados e responsivos.</p>
+                    <a href="contact.html" class="btn-primary" style="display: inline-block; text-align: center;">[ Solicitar Orçamento ]</a>
                 </div>
-                
-                <div style="background-color: #161b22; padding: 25px; border-radius: 8px; border: 1px solid #30363d;">
-                    <h3 style="color: #58a6ff; font-size: 22px; margin-bottom: 15px;">Inteligência Artificial</h3>
-                    <p style="line-height: 1.6; color: #8b949e;">Implementação de soluções inteligentes, automações avançadas e integração de modelos de IA para otimização de processos.</p>
+
+                <div class="card" style="background-color: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">🤖 Inteligência Artificial</h3>
+                    <p style="color: #8b949e; line-height: 1.6; margin-bottom: 20px;">Implementação de soluções em IA generativa, assistentes inteligentes para atendimento e automação de fluxos de trabalho utilizando modelos avançados.</p>
+                    <a href="ai.html" class="btn-primary" style="display: inline-block; text-align: center;">[ Conhecer Soluções ]</a>
                 </div>
-                
-                <div style="background-color: #161b22; padding: 25px; border-radius: 8px; border: 1px solid #30363d;">
-                    <h3 style="color: #58a6ff; font-size: 22px; margin-bottom: 15px;">Ciência de Dados</h3>
-                    <p style="line-height: 1.6; color: #8b949e;">Análise avançada de dados, estruturação de dashboards e modelagem estatística para tomada de decisões estratégicas.</p>
+
+                <div class="card" style="background-color: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">📊 Ciência de Dados</h3>
+                    <p style="color: #8b949e; line-height: 1.6; margin-bottom: 20px;">Desenvolvimento de dashboards interativos, análise avançada de dados e ferramentas de Business Intelligence para tomada de decisões estratégicas.</p>
+                    <a href="contact.html" class="btn-primary" style="display: inline-block; text-align: center;">[ Solicitar Orçamento ]</a>
+                </div>
+
+                <div class="card" style="background-color: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">🎓 Mentorias Especializadas</h3>
+                    <p style="color: #8b949e; line-height: 1.6; margin-bottom: 20px;">Orientação técnica individual ou em grupo para profissionais e equipes que buscam acelerar a carreira e dominar novas tecnologias.</p>
+                    <a href="mentoring.html" class="btn-primary" style="display: inline-block; text-align: center;">[ Conhecer Mentorias ]</a>
+                </div>
+
+                <div class="card" style="background-color: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">☁️ Cloud Computing & DevOps</h3>
+                    <p style="color: #8b949e; line-height: 1.6; margin-bottom: 20px;">Configuração de ambientes em nuvem, controle de versão avançado, automação de deploys e infraestrutura robusta para aplicações.</p>
+                    <a href="contact.html" class="btn-primary" style="display: inline-block; text-align: center;">[ Solicitar Orçamento ]</a>
+                </div>
+
+                <div class="card" style="background-color: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">📚 Cursos e Treinamentos</h3>
+                    <p style="color: #8b949e; line-height: 1.6; margin-bottom: 20px;">Capacitação prática em programação, Python, Full Stack e inteligência artificial através da nossa plataforma CoreByte Academy.</p>
+                    <a href="courses.html" class="btn-primary" style="display: inline-block; text-align: center;">[ Ver Cursos ]</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer style="background-color: #111; padding: 20px 0; text-align: center; color: #888; border-top: 1px solid #222; margin-top: 60px;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>COREBYTE TECH SOLUTIONS</h3>
+                <p>Transformando ideias em soluções digitais inteligentes.</p>
+            </div>
+            <div class="footer-col">
+                <h3>EMPRESA</h3>
+                <ul>
+                    <li><a href="about.html">• Sobre</a></li>
+                    <li><a href="services.html">• Serviços</a></li>
+                    <li><a href="projects.html">• Projetos</a></li>
+                    <li><a href="contact.html">• Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>SOLUÇÕES</h3>
+                <ul>
+                    <li><a href="services.html">• Desenvolvimento Web</a></li>
+                    <li><a href="ai.html">• Inteligência Artificial</a></li>
+                    <li><a href="courses.html">• Cursos Online</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>CONTATO</h3>
+                <p>📧 contato@corebytetech.com</p>
+                <p>📱 (31) 99206-8281</p>
+                <p>📍 Betim • Minas Gerais • Brasil</p>
+            </div>
+            <div class="footer-col">
+                <h3>REDES SOCIAIS</h3>
+                <ul>
+                    <li><a href="https://github.com/corebytetechsolutions-hub" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.instagram.com/corebytetechsolutions/" target="_blank">Instagram</a></li>
+                    <li><a href="#" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
             <p>&copy; 2026 CoreByte Tech Solutions. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Política de Privacidade</a>
+                <a href="terms.html">Termos de Uso</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/animations.js" defer></script>
+
     <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5531992068281?text=Olá!%20Vim%20pelo%20site%20da%20CoreByte%20e%20gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
+    <a href="https://wa.me/5531992068281?text=Olá!%20Vim%20pelo%20site%20da%20CoreByte." class="whatsapp-float" target="_blank" aria-label="Fale Conosco pelo WhatsApp">
         💬
     </a>
 </body>
