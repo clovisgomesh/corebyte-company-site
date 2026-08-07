@@ -18,26 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Validação e Interatividade do Formulário de Contato
+    // 2. Controle do Menu Hambúrguer Mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    }
+
+    // 3. Validação e Interatividade do Formulário de Contato
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Evita o recarregamento padrão da página
+            e.preventDefault();
 
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
 
-            // Validação simples dos campos
+            // Validação dos campos
             if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
                 alert('Por favor, preencha todos os campos antes de enviar a mensagem.');
                 return;
             }
 
-            // Simulação de envio bem-sucedido
+            // Sucesso no envio
             alert(`Obrigado pelo contato, ${nameInput.value}! Sua mensagem foi enviada com sucesso para a equipe da CoreByte.`);
-            
-            // Limpa o formulário após o envio
             contactForm.reset();
         });
     }

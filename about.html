@@ -9,10 +9,18 @@
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <!-- Header e Menu Padronizado -->
+    <!-- Header e Menu Padronizado com Hambúrguer -->
     <header style="background-color: #111; padding: 20px 0; border-bottom: 1px solid #222;">
         <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <h1 class="logo" style="color: #fff; font-size: 24px; margin: 0;">CoreByte</h1>
+            
+            <!-- Botão do Menu Hambúrguer (Aparece apenas no mobile) -->
+            <button id="menu-toggle" aria-label="Abrir Menu" style="background: none; border: none; cursor: pointer; display: none; flex-direction: column; gap: 5px;">
+                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
+                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
+                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
+            </button>
+
             <nav>
                 <ul class="menu" id="menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
                     <li><a href="index.html" style="color: #bbb; text-decoration: none;">Home</a></li>

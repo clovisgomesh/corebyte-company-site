@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    /* Exibe o botão hambúrguer no celular */
+    #menu-toggle {
+        display: flex !important;
+    }
+
+    /* Esconde o menu por padrão no celular e o transforma em vertical ao abrir */
+    .menu {
+        display: none !important;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #111;
+        padding: 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #222;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        z-index: 1000;
+    }
+
+    /* Quando o JS ativa a classe, o menu aparece */
+    .menu.active {
+        display: flex !important;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}

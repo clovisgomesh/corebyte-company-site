@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,31 +28,27 @@
     <!-- ========================================= -->
     <!-- CABEÇALHO -->
     <!-- ========================================= -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                CoreByte Tech Solutions
-            </div>
-
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header style="background-color: #111; padding: 20px 0; border-bottom: 1px solid #222;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1 class="logo" style="color: #fff; font-size: 24px; margin: 0;">CoreByte</h1>
+            
+            <!-- Botão do Menu Hambúrguer (Aparece apenas no mobile) -->
+            <button id="menu-toggle" aria-label="Abrir Menu" style="background: none; border: none; cursor: pointer; display: none; flex-direction: column; gap: 5px;">
+                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
+                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
+                <span style="width: 25px; height: 3px; background-color: #fff; display: block; border-radius: 2px;"></span>
             </button>
 
-            <ul class="menu" id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="services.html">Serviços</a></li>
-                <li><a href="projects.html">Portfólio</a></li>
-                <li><a href="courses.html">Cursos</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-
-            <a href="contact.html" class="btn-menu">
-                Solicitar Orçamento
-            </a>
-        </nav>
+            <nav>
+                <ul class="menu" id="menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Sobre</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="courses.html">Cursos</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- ========================================= -->
